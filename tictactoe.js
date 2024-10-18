@@ -71,3 +71,15 @@ const allBoxDisabled = () => {
     box.disabled = true;
   });
 };
+
+reset.addEventListener("click", () => {
+  boxes.forEach((box) => {
+    box.innerText = "";
+    box.disabled = false;
+  });
+  turn1 = true;
+  count = 0;
+  winnerFound = false;
+  msg.innerText = "";
+  msgContainer.classList.add("hide");
+});
